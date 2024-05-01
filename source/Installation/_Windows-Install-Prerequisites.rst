@@ -36,11 +36,11 @@ Open a Command Prompt and type the following to install them via Chocolatey:
 Install OpenSSL
 ^^^^^^^^^^^^^^^
 
-Download the *Win64 OpenSSL v1.1.1n* OpenSSL installer from `this page <https://slproweb.com/products/Win32OpenSSL.html>`__.
-Scroll to the bottom of the page and download *Win64 OpenSSL v1.1.1t*.
-Don't download the Win32 or Light versions, or the v3.X.Y installers.
+Open a Command Prompt and type the following to install OpenSSL via Chocolatey:
 
-Run the installer with default parameters, as the following commands assume you used the default installation directory.
+.. code-block:: bash
+
+  choco install -y openssl
 
 This command sets an environment variable that persists over sessions:
 
@@ -99,6 +99,11 @@ As some chocolatey packages rely on it, we start by installing CMake
 .. code-block:: bash
 
    choco install -y cmake
+
+.. note::
+
+   Due to some bugs with CMake on Windows, the CMake version must be at least 3.29.2.
+   If you have already installed CMake previously, make sure to upgrade it to at least that version.
 
 You will need to append the CMake bin folder ``C:\Program Files\CMake\bin`` to your PATH.
 
